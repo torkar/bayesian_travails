@@ -93,7 +93,7 @@ m_nb_add_dup <-
                 prior(lkj(2), class = cor),
                 prior(beta(1, 1), class = zi),
                 prior(gamma(0.01, 0.01), class = shape)),
-      chains = 4, cores = 4, threads = threading(2), adapt_delta = 0.95)
+      chains = 4, cores = 4, threads = threading(2), adapt_delta = 0.99)
 
 m_nb <- add_criterion(m_nb, criterion = "loo")
 m_nb_add_dup <- add_criterion(m_nb_add_dup, criterion = "loo")
